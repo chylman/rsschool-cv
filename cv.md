@@ -1,7 +1,7 @@
-#CV - Ilya Afanasev
+# CV - Ilya Afanasev
 
-##Contact information
+## Contact information
 
-*E-mail: chylmanprosto@gmail.com
-*Whatsapp: +79880885988
-*Telegram: @chylman
+* E-mail: chylmanprosto@gmail.com
+* Whatsapp: +79880885988
+* Telegram: @chylman

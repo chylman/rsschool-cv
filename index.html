@@ -67,37 +67,37 @@
                 </section>
                 <section class="code-examples">
                     <h2>Code Exepmles</h2>
-                    <code>
-                        <pre>
+                    <pre>
+                        <code>
                             const checkStatus = (response) => {
                                 if (response.ok) {
-                                  return response;
+                                return response;
                                 }
-                              
+                            
                                 throw new Error();
-                              }
-                              
-                              const getData = (onSuccess) => {
+                            }
+                            
+                            const getData = (onSuccess) => {
                                 fetch(GET_DATA_URL)
-                                  .then(checkStatus)
-                                  .then((response) => response.json())
-                                  .then((ads) => {
+                                .then(checkStatus)
+                                .then((response) => response.json())
+                                .then((ads) => {
                                     onSuccess(ads);
-                                  })
-                                  .catch(displayGetDataErrorMessage);
-                              
-                              }
-                              
-                              const sendData = (onSuccess, onFail, body) => {
-                              
+                                })
+                                .catch(displayGetDataErrorMessage);
+                            
+                            }
+                            
+                            const sendData = (onSuccess, onFail, body) => {
+                            
                                 fetch(POST_DATA_URL,
-                                  {
+                                {
                                     method: 'POST',
                                     body,
-                                  },
+                                },
                                 )
-                                  .then(checkStatus)
-                                  .then(() => {
+                                .then(checkStatus)
+                                .then(() => {
                                     onSuccess();
                                     adForm.reset();
                                     filterForm.reset();
@@ -105,13 +105,13 @@
                                     resetIconAdMap();
                                     onSelectAdTypeChange();
                                     removePreviewImage();
-                                  })
-                                  .catch(() => {
+                                })
+                                .catch(() => {
                                     onFail();
-                                  })
-                              } 
-                        </pre>
-                    </code>
+                                })
+                            } 
+                          </code>
+                    </pre>
 
                 </section>
                 <section class="english">
@@ -126,6 +126,7 @@
                 <img src="./img/rs_school_js.svg" alt="Логотип RS School" width="200" height="50">
             </div>
             <section class="copyright">
+                <h2>copyright</h2>
                 <span class="copyright__since"></span>
             </section>
         </footer>

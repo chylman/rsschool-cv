@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilya Afanasev - Frontend Developer</title>
+</head>
+<body class="page-body">
+    <div class="page-body__wrapper">
+        <header class="header">
+            <div class="header__wrapper">
+                
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__wrapper">
+                <h1 class="page-header">
+                    Ilya Afanasev - Frontend Developer
+                </h1>
+                <section class="contacts">
+                    <h2>Contact information</h2>
+                    <ul class="contacts__list">
+                        <li class="contacts__item"><address>Russia, Saint-Petersburg</address></li>
+                        <li class="contacts__item"><a href="mailto:chylmanprosto@gmail.com">E-mail</a></li>
+                        <li class="contacts__item"><a href="tel:+79880885988">Whatsapp, phone</a></li>
+                        <li class="contacts__item"><a href="https://t.me/chylman">Telegram</a></li>
+                        <li class="contacts__item"><a href="https://github.com/chylman">GitHub</a></li>
+                    </ul>
+                </section>
+                <section class="about-me">
+                    <h2>About me</h2>
+                    <p>
+                        I am a junior frontend developer. I have been developing for about a year. 
+                        My Characteristic qualities: purposefulness, involvement, self-development. 
+                        I try to find mutual understanding with the employer in order to be useful 
+                        to each other.
+                    </p>
+                </section>
+                <section class="skills">
+                    <h2>Skills</h2>
+                    <ul class="skills__list">
+                        <li class="skills__item"><p>HTML</p></li>
+                        <li class="skills__item"><p>CSS (Framework Bootstrap, Preprocessor SCSS, BEM methodology).</p></li>
+                        <li class="skills__item"><p>JavaScript (Fundamentals,Functional Programming, OOP, Asynchronous JavaScript, ES6+,DOM),JSON.</p></li>
+                        <li class="skills__item"><p>Version control: Git (remote service GitHub).</p></li>
+                        <li class="skills__item"><p>Module Bundlers: Gulp, Webpack.</p></li>
+                        <li class="skills__item"><p>Windows OS, Linux(Ubuntu)</p></li>
+                        <li class="skills__item"><p>Figma(for web development), Photoshop</p></li>
+                    </ul>
+                </section>
+                <section class="eduction">
+                    <h2>Eduction</h2>
+                    <p>Volgograd Social and Pedagogical University (2014), specialty: mathematics-computer science</p>
+                </section>
+                <section class="experience">
+                    <h2>Experience</h2>
+                    <p>HTML Academy course Frontend Developer (2021)</p>
+                    <p>Projects(HTML, JS, CSS):</p>
+                    <ul class="experience__list">
+                        <li class="experience__item"><a href="https://github.com/chylman/1517165-keksobooking-22">Booking</a></li>
+                        <li class="experience__item"><a href="https://github.com/chylman/jewellery">Jewellery</a></li>
+                        <li class="experience__item"><a href="https://github.com/chylman/bicycles">Bicycles</a></li>
+                        <li class="experience__item"><a href="https://github.com/chylman/1517165-pink-21">Pink</a></li>
+                        <li class="experience__item"><a href="https://github.com/chylman/smart-device">SmartDevice</a></li>
+                    </ul>
+                </section>
+                <section class="code-examples">
+                    <h2>Code Exepmles</h2>
+                    <code>
+                        <pre>
+                            const checkStatus = (response) => {
+                                if (response.ok) {
+                                  return response;
+                                }
+                              
+                                throw new Error();
+                              }
+                              
+                              const getData = (onSuccess) => {
+                                fetch(GET_DATA_URL)
+                                  .then(checkStatus)
+                                  .then((response) => response.json())
+                                  .then((ads) => {
+                                    onSuccess(ads);
+                                  })
+                                  .catch(displayGetDataErrorMessage);
+                              
+                              }
+                              
+                              const sendData = (onSuccess, onFail, body) => {
+                              
+                                fetch(POST_DATA_URL,
+                                  {
+                                    method: 'POST',
+                                    body,
+                                  },
+                                )
+                                  .then(checkStatus)
+                                  .then(() => {
+                                    onSuccess();
+                                    adForm.reset();
+                                    filterForm.reset();
+                                    resetMainMarker();
+                                    resetIconAdMap();
+                                    onSelectAdTypeChange();
+                                    removePreviewImage();
+                                  })
+                                  .catch(() => {
+                                    onFail();
+                                  })
+                              } 
+                        </pre>
+                    </code>
+
+                </section>
+                <section class="english">
+                    <h2>English</h2>
+                    <p>Pre-Intermediate (A2+)</p>
+                    <p>I am learn English every day (youtube, duolingo).</p>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-logo">
+                <img src="./img/rs_school_js.svg" alt="Логотип RS School" width="200" height="50">
+            </div>
+            <section class="copyright">
+                <span class="copyright__since"></span>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>

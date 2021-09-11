@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Ilya Afanasev - Frontend Developer</title>
 </head>
 <body class="page-body">
     <div class="page-body__wrapper">
         <header class="header">
             <div class="header__wrapper">
-                
+
             </div>
         </header>
         <main class="main">
@@ -31,9 +32,9 @@
                 <section class="about-me">
                     <h2>About me</h2>
                     <p>
-                        I am a junior frontend developer. I have been developing for about a year. 
-                        My Characteristic qualities: purposefulness, involvement, self-development. 
-                        I try to find mutual understanding with the employer in order to be useful 
+                        I am a junior frontend developer. I have been developing for about a year.
+                        My Characteristic qualities: purposefulness, involvement, self-development.
+                        I try to find mutual understanding with the employer in order to be useful
                         to each other.
                     </p>
                 </section>
@@ -73,10 +74,10 @@
                                 if (response.ok) {
                                 return response;
                                 }
-                            
+
                                 throw new Error();
                             }
-                            
+
                             const getData = (onSuccess) => {
                                 fetch(GET_DATA_URL)
                                 .then(checkStatus)
@@ -85,11 +86,11 @@
                                     onSuccess(ads);
                                 })
                                 .catch(displayGetDataErrorMessage);
-                            
+
                             }
-                            
+
                             const sendData = (onSuccess, onFail, body) => {
-                            
+
                                 fetch(POST_DATA_URL,
                                 {
                                     method: 'POST',
@@ -109,7 +110,7 @@
                                 .catch(() => {
                                     onFail();
                                 })
-                            } 
+                            }
                           </code>
                     </pre>
 
@@ -122,6 +123,7 @@
             </div>
         </main>
         <footer class="footer">
+          <div class="footer__wrapper">
             <div class="footer-logo">
                 <img src="./img/rs_school_js.svg" alt="Логотип RS School" width="200" height="50">
             </div>
@@ -129,6 +131,7 @@
                 <h2>copyright</h2>
                 <span class="copyright__since"></span>
             </section>
+          </div>
         </footer>
     </div>
 </body>

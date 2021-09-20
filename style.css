@@ -116,6 +116,7 @@
 .main__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
 
   box-sizing: border-box;
 
@@ -125,23 +126,95 @@
   padding: 0 10px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .main__wrapper {
     grid-template-columns: 1fr;
   }
 }
 
-.main__wrapper section:last-child {
-  grid-column: 1 / 3;
-
-  justify-self: center;
-}
-
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .main__wrapper section:last-child {
     grid-column: initial;
   }
 }
+
+
+/* contacts */
+
+.contacts__item a {
+  color: black;
+  text-decoration: none;
+}
+
+/* about me */
+
+/* skills */
+
+/* educaton */
+
+/* expirience */
+
+.experience {
+  grid-column: 1 / 3;
+}
+
+@media (max-width: 1023px) {
+  .experience {
+    grid-column: initial;
+  }
+}
+
+.experience__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 30px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.experience__item {
+  max-width: calc(50% - 15px);
+}
+
+@media (max-width: 1023px) {
+  .experience__item {
+    max-width: 100%;
+  }
+}
+
+/* card-project */
+
+.card-project {
+  box-sizing: border-box;
+}
+
+.card-project:hover {
+  opacity: 0.7;
+}
+
+.card-project a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.card-project__img-wrapper {
+  width: 100%;
+}
+
+.card-project__img-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+/* code-examples */
+
+/* english */
 
 /* footer */
 
@@ -170,7 +243,7 @@
   justify-self: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .page-header {
     grid-column: initial;
   }

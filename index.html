@@ -5,12 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
     <title>Ilya Afanasev - Frontend Developer</title>
 </head>
 <body class="page-body">
     <div class="page-body__wrapper">
         <header class="header">
             <div class="header__wrapper">
+              <button class="header__menu-toggle-button" aria-label="Toggle button"></button>
+              <nav class="header__nav">
+                <ul class="header__nav-list">
+                  <li class="header__nav-item"><a href="#contacts">Contacts information</a></li>
+                  <li class="header__nav-item"><a href="#about-me">About me</a></li>
+                  <li class="header__nav-item"><a href="#skills">Skills</a></li>
+                  <li class="header__nav-item"><a href="#education">Education</a></li>
+                  <li class="header__nav-item"><a href="#experience">Experience</a></li>
+                  <li class="header__nav-item"><a href="#code-examples">Code-examples</a></li>
+                  <li class="header__nav-item"><a href="#english">English</a></li>
+                </ul>
+              </nav>
+              <div class="header__img-wrapper">
+                <img src="./img/my_photo.jpg" alt="My photo" width="400" height="300">
+              </div>
 
             </div>
         </header>
@@ -19,7 +35,7 @@
                 <h1 class="page-header">
                     Ilya Afanasev - Frontend Developer
                 </h1>
-                <section class="contacts">
+                <section class="contacts" id="contacts">
                     <h2>Contact information</h2>
                     <ul class="contacts__list">
                         <li class="contacts__item"><address>Russia, Saint-Petersburg</address></li>
@@ -29,7 +45,7 @@
                         <li class="contacts__item"><a href="https://github.com/chylman">GitHub</a></li>
                     </ul>
                 </section>
-                <section class="about-me">
+                <section class="about-me" id="about-me">
                     <h2>About me</h2>
                     <p>
                         I am a junior frontend developer. I have been developing for about a year.
@@ -38,7 +54,7 @@
                         to each other.
                     </p>
                 </section>
-                <section class="skills">
+                <section class="skills" id="skills">
                     <h2>Skills</h2>
                     <ul class="skills__list">
                         <li class="skills__item"><p>HTML</p></li>
@@ -50,75 +66,101 @@
                         <li class="skills__item"><p>Figma(for web development), Photoshop</p></li>
                     </ul>
                 </section>
-                <section class="eduction">
-                    <h2>Eduction</h2>
+                <section class="education" id="education">
+                    <h2>Education</h2>
                     <p>Volgograd Social and Pedagogical University (2014), specialty: mathematics-computer science</p>
                 </section>
-                <section class="experience">
+                <section class="experience" id="experience">
                     <h2>Experience</h2>
                     <p>HTML Academy course Frontend Developer (2021)</p>
                     <p>Projects(HTML, JS, CSS):</p>
                     <ul class="experience__list">
-                        <li class="experience__item"><a href="https://github.com/chylman/1517165-keksobooking-22">Booking</a></li>
-                        <li class="experience__item"><a href="https://github.com/chylman/jewellery">Jewellery</a></li>
-                        <li class="experience__item"><a href="https://github.com/chylman/bicycles">Bicycles</a></li>
-                        <li class="experience__item"><a href="https://github.com/chylman/1517165-pink-21">Pink</a></li>
+                        <li class="experience__item card-project"><a href="https://github.com/chylman/1517165-keksobooking-22">
+                          <h3>Booking</h3>
+                          <div class="card-project__img-wrapper">
+                            <img src="" alt="" srcset="">
+                          </div>
+                          <p>Service for placing ads about renting out</p>
+                          <p>Technology stack: HTML, CSS, JS, Open Maps Leaflet, Webpack, SCSS</p>
+                        </a></li>
+                        <li class="experience__item"><a href="https://github.com/chylman/jewellery">
+                          <h3>Jewellery</h3>
+                          <div class="card-project__img-wrapper">
+                            <img src="" alt="" srcset="">
+                          </div>
+                          <p>Multi-page online jewelry store</p>
+                          <p>Technology stack: HTML, CSS, JS, GULP, SCSS</p>
+                          </a></li>
+                        <li class="experience__item">
+                          <a href="https://github.com/chylman/bicycles">
+                            <h3>Bicycles</h3>
+                            <div class="card-project__img-wrapper">
+                              <img src="" alt="" srcset="">
+                            </div>
+                            <p>Landing page of an online bicycle store</p>
+                            <p>Technology stack: HTML, CSS, JS, GULP, SCSS</p>
+                            </a></li>
+                        <li class="experience__item"><a href="https://github.com/chylman/1517165-pink-21">
+                          <h3>Pink</h3>
+                          <div class="card-project__img-wrapper">
+                            <img src="" alt="" srcset="">
+                          </div>
+                          <p>Landing page mobile application Pink </p>
+                          <p>Technology stack: HTML, CSS, JS, GULP, Less</p>
+                          </a></li>
                         <li class="experience__item"><a href="https://github.com/chylman/smart-device">SmartDevice</a></li>
                     </ul>
                 </section>
-                <section class="code-examples">
-                    <h2>Code Exepmles</h2>
+                <section class="code-examples" id="code-examples">
+                    <h2>Code Exemples</h2>
                     <pre>
-                        <code>
-                            const checkStatus = (response) => {
-                                if (response.ok) {
-                                return response;
-                                }
+                        <code class="language-javascript">
+  const checkStatus = (response) => {
+      if (response.ok) {
+      return response;
+      }
 
-                                throw new Error();
-                            }
+      throw new Error();
+  }
 
-                            const getData = (onSuccess) => {
-                                fetch(GET_DATA_URL)
-                                .then(checkStatus)
-                                .then((response) => response.json())
-                                .then((ads) => {
-                                    onSuccess(ads);
-                                })
-                                .catch(displayGetDataErrorMessage);
+  const getData = (onSuccess) => {
+      fetch(GET_DATA_URL)
+      .then(checkStatus)
+      .then((response) => response.json())
+      .then((ads) => {
+          onSuccess(ads);
+      })
+      .catch(displayGetDataErrorMessage);
 
-                            }
+  }
 
-                            const sendData = (onSuccess, onFail, body) => {
+  const sendData = (onSuccess, onFail, body) => {
 
-                                fetch(POST_DATA_URL,
-                                {
-                                    method: 'POST',
-                                    body,
-                                },
-                                )
-                                .then(checkStatus)
-                                .then(() => {
-                                    onSuccess();
-                                    adForm.reset();
-                                    filterForm.reset();
-                                    resetMainMarker();
-                                    resetIconAdMap();
-                                    onSelectAdTypeChange();
-                                    removePreviewImage();
-                                })
-                                .catch(() => {
-                                    onFail();
-                                })
-                            }
-                          </code>
-                    </pre>
-
+      fetch(POST_DATA_URL,
+      {
+          method: 'POST',
+          body,
+      },
+      )
+      .then(checkStatus)
+      .then(() => {
+          onSuccess();
+          adForm.reset();
+          filterForm.reset();
+          resetMainMarker();
+          resetIconAdMap();
+          onSelectAdTypeChange();
+          removePreviewImage();
+      })
+      .catch(() => {
+          onFail();
+      })
+  }
                 </section>
-                <section class="english">
+                <section class="english" id="english">
                     <h2>English</h2>
                     <p>Pre-Intermediate (A2+)</p>
-                    <p>I am learn English every day (youtube, duolingo).</p>
+                    <p>I am learn English every day</p>
                 </section>
             </div>
         </main>
@@ -134,5 +176,8 @@
           </div>
         </footer>
     </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

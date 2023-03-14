@@ -31,7 +31,19 @@ key importance, I am ready to adapt to the working conditions accepted in the co
 
 ## Code example
 
+```
+function lovefunc(flower1, flower2){
+  if ((flower1%2===0 && flower2%2!=0) || (flower2%2===0 && flower1%2!=0)) {
+    return true;
+  }
+  else return false;
+  // moment of truth
+}
+```
 ## Education
+
+Volgograd State Pedagogical Univercity
 
 ## English level
 
+I'm learning English. My English level A2.
